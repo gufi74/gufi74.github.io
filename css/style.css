@@ -1,0 +1,116 @@
+* {
+    font-family: Cambria;
+}
+
+body {
+    background-color: bisque;
+    overflow: hidden;
+}
+
+.container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    display: flex;
+    width: 700px;
+    height: 700px;
+    align-items: center;
+    justify-content: center;
+}
+.card {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    border: 1px solid black;
+}
+
+.active {
+    display: none;
+}
+
+.closed {
+    width: 567px;
+    height: 405px;
+    background-color: rgba(247, 255, 204, 0.705);
+}
+
+
+.opened {
+    width: 405px;
+    height: 567px;
+    background-color: beige;
+}
+
+.button{
+    box-sizing: content-box;
+    width: 100px;
+    height: 100px;
+    padding: 20px; 
+    margin: -20px;
+    background-image: url(../img/sealing.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    align-self: center;
+    border:none;
+    background-color: transparent;
+    outline:none;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+.pic {
+    max-height: 160px;
+    flex-basis: 100%;
+    object-fit: contain;
+    animation-name: dance;
+    animation-duration: 500ms;
+    animation-iteration-count: infinite;
+}
+
+@keyframes dance {
+    0% {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+    }
+    50% { 
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+    }
+    100% {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+    }
+  }
+
+.small {
+    max-height: 50px;
+}
+
+.normal {
+    max-height: 80px;
+}
+
+.text {
+    flex-basis: 100%;
+    text-align: center;
+}
+
+.outer {
+    font-size: 1.8em;
+}
+
+.header {
+    font-size: 1.6em;
+    text-transform: uppercase;
+}
+
+.wishes {
+    font-size: 1.3em;
+}
